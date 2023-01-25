@@ -96,7 +96,8 @@ public class Main
                     double base = input.nextInt();
                     Triangle triangle = new Triangle(side1, side2, base);
                     if ((side1 == side2)&&(base<=side1) && (base<=side2)) {
-                        LOGGER.log(Level.INFO,"Area of the Triangle:" + triangle.area() + "\nPerimeter of the Triangle:" + triangle.perimeter());
+                        LOGGER.log(Level.INFO,Double.toString(triangle.area()),"Area of the Area:" + triangle.area());
+                        LOGGER.log(Level.INFO,Double.toString(triangle.perimeter()),"\nPerimeter of the Triangle:" + triangle.perimeter());
                     } else {
                         LOGGER.log(Level.INFO,"please enter valid values");
                     }
@@ -107,13 +108,15 @@ public class Main
                     LOGGER.log(Level.INFO,"Enter the breadth:");
                     double breadth = input.nextDouble();
                     ReactAngle reactAngle = new ReactAngle(length, breadth);
-                    LOGGER.log(Level.INFO,"Area of the ReactAngle:" + reactAngle.area() + "\nPerimeter of the Reactangle:" + reactAngle.perimeter());
+                    LOGGER.log(Level.INFO,Double.toString(reactAngle.area()),"Area of the ReactAngle:" + reactAngle.area());
+                    LOGGER.log(Level.INFO,Double.toString(reactAngle.perimeter()),"\nPerimeter of the Reactangle:" + reactAngle.perimeter());
                 }
                 case 3 -> {
                     LOGGER.log(Level.INFO,"Enter the radius:");
                     double radius = input.nextDouble();
                     Circle circle = new Circle(radius);
-                    LOGGER.log(Level.INFO,"Area of the Circle:" + circle.area() + "\nPerimeter of the Circle:" + circle.perimeter());
+                    LOGGER.log(Level.INFO,Double.toString(circle.area()),"Area of the Circle:" + circle.area() );
+                    LOGGER.log(Level.INFO,Double.toString(circle.perimeter()),"\nPerimeter of the Circle:" + circle.perimeter());
                 }
                 default -> {
                     LOGGER.log(Level.INFO,"----Thank You----");
