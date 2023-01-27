@@ -96,7 +96,7 @@ public class Main
                     double base = input.nextInt();
                     Triangle triangle = new Triangle(side1, side2, base);
                     if ((side1 == side2)&&(base<=side1) && (base<=side2)) {
-                        LOGGER.log(Level.INFO,Double.toString(triangle.area()),"Area of the Area:" + triangle.area());
+                        LOGGER.log(Level.INFO,Double.toString(triangle.area()),"Area of the Triangle:" + triangle.area());
                         LOGGER.log(Level.INFO,Double.toString(triangle.perimeter()),"\nPerimeter of the Triangle:" + triangle.perimeter());
                     } else {
                         LOGGER.log(Level.INFO,"please enter valid values");
