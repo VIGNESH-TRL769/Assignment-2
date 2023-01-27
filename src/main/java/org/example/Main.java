@@ -1,7 +1,7 @@
 package org.example;
 
 import java.util.Scanner;
-import java.util.logging.Level;
+
 import java.util.logging.Logger;
 
 interface Shape
@@ -78,48 +78,48 @@ class Circle implements Shape
 }
 public class Main
 {
-    private static final Logger LOGGER =  Logger.getLogger(Logger.GLOBAL_LOGGER_NAME);
+    public static final Logger LOGGER =  Logger.getLogger("InfoLogging");
     public static void main(String[] args)
     {
         Scanner input=new Scanner(System.in);
         while(true) {
             int key=0;
-            LOGGER.log(Level.INFO,"\n1.Triangle\n2.Reactangle\n3.Circle\n5.Exit\nEnter the Choice:");
+            LOGGER.info("\n1.Triangle\n2.Reactangle\n3.Circle\n5.Exit\nEnter the Choice:");
             int value = input.nextInt();
             switch (value) {
                 case 1 -> {
-                    LOGGER.log(Level.INFO,"Enter the side1 value:");
+                    LOGGER.info("Enter the side1 value:");
                     double side1 = input.nextInt();
-                    LOGGER.log(Level.INFO,"Enter the side2 value:");
+                    LOGGER.info("Enter the side2 value:");
                     double side2 = input.nextInt();
-                    LOGGER.log(Level.INFO,"Enter the base value:");
+                    LOGGER.info("Enter the base value:");
                     double base = input.nextInt();
                     Triangle triangle = new Triangle(side1, side2, base);
                     if ((side1 == side2)&&(base<=side1) && (base<=side2)) {
-                        LOGGER.log(Level.INFO,Double.toString(triangle.area()),"Area of the Triangle:" + triangle.area());
-                        LOGGER.log(Level.INFO,Double.toString(triangle.perimeter()),"\nPerimeter of the Triangle:" + triangle.perimeter());
+                        LOGGER.info("Area of the Triangle:" + triangle.area());
+                        LOGGER.info("\nPerimeter of the Triangle:" + triangle.perimeter());
                     } else {
-                        LOGGER.log(Level.INFO,"please enter valid values");
+                        LOGGER.info("please enter valid values");
                     }
                 }
                 case 2 -> {
-                    LOGGER.log(Level.INFO,"Enter the Length:");
+                    LOGGER.info("Enter the Length:");
                     double length = input.nextDouble();
-                    LOGGER.log(Level.INFO,"Enter the breadth:");
+                    LOGGER.info("Enter the breadth:");
                     double breadth = input.nextDouble();
                     ReactAngle reactAngle = new ReactAngle(length, breadth);
-                    LOGGER.log(Level.INFO,Double.toString(reactAngle.area()),"Area of the ReactAngle:" + reactAngle.area());
-                    LOGGER.log(Level.INFO,Double.toString(reactAngle.perimeter()),"\nPerimeter of the Reactangle:" + reactAngle.perimeter());
+                    LOGGER.info("Area of the ReactAngle:" + reactAngle.area());
+                    LOGGER.info("\nPerimeter of the Reactangle:" + reactAngle.perimeter());
                 }
                 case 3 -> {
-                    LOGGER.log(Level.INFO,"Enter the radius:");
+                    LOGGER.info("Enter the radius:");
                     double radius = input.nextDouble();
                     Circle circle = new Circle(radius);
-                    LOGGER.log(Level.INFO,Double.toString(circle.area()),"Area of the Circle:" + circle.area() );
-                    LOGGER.log(Level.INFO,Double.toString(circle.perimeter()),"\nPerimeter of the Circle:" + circle.perimeter());
+                    LOGGER.info("Area of the Circle:" + circle.area() );
+                    LOGGER.info("\nPerimeter of the Circle:" + circle.perimeter());
                 }
                 default -> {
-                    LOGGER.log(Level.INFO,"----Thank You----");
+                    LOGGER.info("----Thank You----");
                     key = 1;
                 }
             }
