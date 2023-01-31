@@ -74,8 +74,7 @@ class Circle implements Shape
     {
         return pi*(radius*radius);
     }
-
-
+    
 }
 public class Main
 {
@@ -84,7 +83,6 @@ public class Main
     {
         Scanner input=new Scanner(System.in);
         while(true) {
-            try {
                 int key = 0;
                 LOGGER.info("\n1.Triangle\n2.Reactangle\n3.Circle\n4.Exit\nEnter the Choice:");
                 int value = input.nextInt();
@@ -128,13 +126,7 @@ public class Main
                 if (key == 1) {
                     break;
                 }
-            } catch (Exception e) {
-                String value="Please Enter Valid Numbers:"+e;
-                LOGGER.info(value);
-                input.nextLine();
-            }
-
-        }
+            } 
 
 
     }
